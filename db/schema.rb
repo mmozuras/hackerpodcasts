@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002202929) do
+ActiveRecord::Schema.define(:version => 20121003200557) do
 
   create_table "episodes", :force => true do |t|
     t.datetime "published_at"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(:version => 20121002202929) do
     t.integer  "podcast_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "entry_id"
   end
 
+  add_index "episodes", ["entry_id"], :name => "index_episodes_on_entry_id", :unique => true
   add_index "episodes", ["podcast_id"], :name => "index_episodes_on_podcast_id"
 
   create_table "podcasts", :force => true do |t|
