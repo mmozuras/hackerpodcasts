@@ -21,3 +21,5 @@ end
 gem 'jquery-rails'
 gem 'slim'
 gem 'slim-rails'
+
+gem 'feedzirra'
