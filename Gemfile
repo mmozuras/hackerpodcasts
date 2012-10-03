@@ -23,3 +23,4 @@ gem 'slim'
 gem 'slim-rails'
 
 gem 'feedzirra'
+gem 'resque', '~> 1.22.0'
