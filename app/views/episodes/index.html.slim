@@ -1,9 +1,5 @@
-table
-  tr
-    th Name
-
-  - @episodes.each do |episode|
-    tr
-      td = episode.name
-
-br
+ul
+- @episodes.each do |episode|
+  li
+    = image_tag "#{episode.podcast.name}.jpg", :size => "100x100"
+    = episode.name
