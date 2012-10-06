@@ -2,5 +2,7 @@
   ul#episodes.unstyled.span12
     - @episodes.each do |episode|
       li.span2
-        = link_to image_tag("#{episode.podcast.name}.jpg"), episode.url
+        = link_to image_tag("#{episode.podcast.name}.jpg"), episode.url, :class => 'img-rounded'
         = link_to episode.name, episode.url
+        = link_to episode.audio_url do
+          i.icon-music
