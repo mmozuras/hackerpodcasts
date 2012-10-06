@@ -21,6 +21,7 @@ end
 gem 'jquery-rails'
 gem 'slim'
 gem 'slim-rails'
+gem 'twitter-bootstrap-rails'
 
 gem 'feedzirra'
 gem 'resque', '~> 1.22.0'

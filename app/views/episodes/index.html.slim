@@ -1,5 +1,6 @@
-ul#episodes
-  - @episodes.each do |episode|
-    li
-      = image_tag "#{episode.podcast.name}.jpg", :size => "150x150"
-      = episode.name
+.row-fluid
+  ul#episodes.unstyled.span12
+    - @episodes.each do |episode|
+      li.span2
+        = image_tag "#{episode.podcast.name}.jpg"
+        = episode.name
