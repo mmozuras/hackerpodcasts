@@ -24,6 +24,7 @@ namespace :feeds do
 
   def find_or_create_episode(podcast, entry)
     podcast.episodes.find_or_initialize_by_entry_id(entry.entry_id) do |e|
+      e.url = entry.url
       e.audio_url = entry.content
       e.description = entry.summary
       e.name = entry.title
