@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Hacker Podcasts
+    meta name="author" content="Mindaugas Mozūras"
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  body
+    .container
+      == yield
