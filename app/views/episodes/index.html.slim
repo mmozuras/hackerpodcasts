@@ -3,4 +3,4 @@
     - @episodes.each do |episode|
       li.span2
         = link_to image_tag("#{episode.podcast.name}.jpg"), episode.url, :class => 'img-rounded'
-        = link_to truncate(episode.name, :length => 26, :omission => '...'), episode.audio_url
+        = link_to truncate(episode.name, :length => 24, :omission => '...'), episode.audio_url
